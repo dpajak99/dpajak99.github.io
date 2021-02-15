@@ -1,0 +1,107 @@
+<html>
+<head>
+    <title> Włączeni Mobile App </title>
+	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<meta name="theme-color" content="#76C7FB">
+</head>
+<style>
+    body {
+        background-color: #FFECA0;
+    }
+    /* The device with borders */
+    .smartphone {
+        position: relative;
+        width: 360px;
+        height: 640px;
+        margin: auto;
+        border: 16px black solid;
+        border-top-width: 60px;
+        border-bottom-width: 60px;
+        border-radius: 36px;
+    }
+
+    /* The horizontal line on the top of the device */
+    .smartphone:before {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 5px;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #333;
+        border-radius: 10px;
+    }
+
+    /* The circle on the bottom of the device */
+    .smartphone:after {
+        content: '';
+        display: block;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 50%;
+        bottom: -65px;
+        transform: translate(-50%, -50%);
+        background: #333;
+        border-radius: 50%;
+    }
+
+    /* The screen (or content) of the device */
+    .smartphone .content {
+        width: 360px;
+        height: 640px;
+        background: white;
+    }
+	
+	.reload {
+		background-color: #1154CD;
+		padding: 40px;
+		border-radius: 10px;
+		border: none;
+		position: absolute;
+		bottom: 50px;
+		right: 50px;
+		z-index: 999;
+		cursor: pointer;
+		color: #fff;
+		font-size: 30px;
+		font-family: Sans-serif ;
+		font-weight: bold;
+	}
+	
+	.open-mobile {
+		background-color: #76C7FB;
+		bottom: 200px;
+	}
+	
+	.notes {
+		position: absolute;
+		bottom: 150px;
+		left: 50px;
+	}
+</style>
+
+<body>
+<img src="wlaczeni-develop-logo.png">
+<div class="notes">
+	<h1>Uwagi:</h1>
+	<b>Testowy login do zalogowania:</b> <i>test@test.pl</i><br />
+	<b>Testowe hasło do zalogowania:</b> <i>test</i><br />
+	<br />
+	<b>Email istniejący w bazie danych (rejestracja):</b> <i>123@123.pl</i>
+</div>
+<br />
+<a href="app.html"><button class="reload open-mobile">Wersja mobilna</button></a>
+<button class="reload" onclick="window.location.reload(true);">Zresetuj aplikację</button>
+<div class="smartphone">
+    <div class="content">
+        <iframe src="app.html" title="description" style="width:100%;border:none;height:100%">
+    </div>
+</div>
+</body>
+</html>
